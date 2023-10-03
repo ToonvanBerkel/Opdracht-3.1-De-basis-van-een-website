@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>results</title>
+</head>
+
+<body class="b1">
+    <nav>
+      <div class="navone">
+        <a href="#"><img src="../picture/picture/hacker.png" id="logo" /></a>
+        <ul>
+          <li><a href="./html-css.html">HTML/CSS</a></li>
+          <li><a href="./javascript.html">Javascript</a></li>
+          <li><a href="./php.html">PHP</a></li>
+          <li><a href="./mysql.html">SQL</a></li>
+          <li><a href="./contact.html">contact</a></li>
+          <li class="dropdown"><a href="" class="dropbtn">jaar 2</a>
+          <div class="dropdown-content">
+            <a href="#">OOP</a>
+            <a href="#">Laravel</a>
+            <a href="#">Testen</a>
+          </div>
+          </li>
+      </div>
+      </ul>
+    </nav>
+    <div id="results"></div>
+    <a href="./contact.html">Terug naar contact</a>
+    <script>
+        const resultslist = document.getElementById('results')
+        new URLSearchParams(window.location.search).foreach((value, name) => {
+            resultslist.append(`${name}: ${value}`)
+            resultslist.append(document.createElement('br'))
+        })
+    </script>
+    <footer>
+        <p>Copyright Techniek College Rotterdam</p>
+    </footer>
+</body>
+
+</html>
